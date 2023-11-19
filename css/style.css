@@ -1,0 +1,216 @@
+:root{
+    --main-black: #0d1117;
+    --sec-black: #161b22;
+    --finance-color: #30a277;
+    --health-color: #fb882e;
+    --productivity-color: #fc3637;
+    --education-color: #2e4acd;
+    --mid-gray: #474a4e;
+    --gray-color: #dadada;
+    --text-color: #D8D9DA;
+    --category-education-color : #A2678A;
+    --category-finance-color : #8D7B68;
+    --category-health-color : #5C8374;
+    --category-productivity-color: #526D82 ;
+}
+
+
+body{
+    font-family: "Source Sans Pro", sans-serif;
+    min-height: 100vh;
+    background-color: var(--main-black);
+    color: var(--text-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Noto Sans Syloti Nagri", sans-serif;
+}
+
+::selection{
+    background-color: var(--gray-color);
+    color: var(--main-black);
+}
+
+/* ====================> customize scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--gray-color);
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--main-black);
+    box-shadow: 0px 0px 4px 2px #282f38 inset;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #02050b;
+  }
+  ::-webkit-scrollbar-track,
+  ::-webkit-scrollbar-thumb {
+    border-radius: 12px;
+  }
+
+a{
+    color: inherit;
+}
+
+.btn-new-task {
+    --bs-btn-color: #222;
+    --bs-btn-bg: #FFD966;
+    --bs-btn-border-color: rgb(255, 221, 72);
+    --bs-btn-hover-color: #222;
+    --bs-btn-hover-bg: #ffcc35;
+    --bs-btn-hover-border-color: #ffc71e;
+    
+}
+.btn-update-task{
+    --bs-btn-color: #222;
+    --bs-btn-bg: #6096B4;
+    --bs-btn-border-color: #5192b4;
+    --bs-btn-hover-color: #222;
+    --bs-btn-hover-bg: #2b7fad;
+    --bs-btn-hover-border-color: #2d84b2;
+}
+.input-group-text {
+    background-color: #fff;
+    border: none;
+}
+#search{
+    outline: none;
+    border: none;
+    margin-left: 1px;
+    padding: .5rem;
+}
+header .container{
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+}
+
+header h1,
+main h3{
+    font-family: "Lobster", cursive;
+    letter-spacing: 2px;
+}
+
+header{
+    background-color: var(--sec-black);
+}
+nav .container{
+    padding-block: .5rem;
+   border-top: 1px solid var(--mid-gray);
+   border-bottom: 1px solid var(--mid-gray);
+}
+nav ul li{
+    background-color: var(--sec-black);
+    font-size: 23px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+nav ul li i{
+    cursor: pointer;
+    padding: 11px;
+    display: flex;
+    border-radius: inherit;
+    transition: all .75s;
+}
+nav ul li i.active{
+    background-color: var(--mid-gray);
+    transform: scale(1.05);
+}
+nav ul li i:hover{
+    background-color: var(--mid-gray);
+}
+section .header span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--sec-black);
+    padding-inline: 6px;
+    border-radius: 15px;
+    font-size: 15px;
+}
+section .header{
+    background-color: var(--main-black);
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+.container.columns section .content,
+.tasks .task{
+    border: 1px solid var(--mid-gray);
+    border-radius: 8px;
+}
+.container.columns section .content{
+    background-color: var(--sec-black);
+
+}
+.tasks .task{
+    background-color: var(--main-black);
+    padding: 1rem;
+}
+.tasks .task:not(:last-child) {
+    margin-bottom: 1rem;
+}
+.tasks .task h5{
+    font-size: 18px;
+  font-weight: 700;
+}
+section .task .category {
+    width: fit-content;
+    font-size: 14px;
+    padding: 3px 8px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+.category.education{
+    background-color: var(--category-education-color);
+}
+.category.health{
+    background-color: var(--category-health-color);
+}
+.category.finance{
+    background-color: var(--category-finance-color);
+}
+.category.productivity{
+    background-color: var(--category-productivity-color);
+}
+section i {
+    cursor: pointer;
+}
+
+.form-floating > textarea {
+    min-height: 150px;
+    max-height: 300px;
+    resize: vertical;
+}
+
+.tasks[data-view = "bars"] .task{
+    min-width: 300px;
+    max-width: 300px;
+    margin: 0;
+}
+
+@media screen and (max-width : 575px) {
+    .tasks[data-view = "bars"] .task{
+        min-width: 200px;
+        max-width: 200px;
+    }
+    nav ul li{
+        font-size: 17px;
+        width: 30px;
+    height: 30px;
+    }
+    
+}
+@media screen and (max-width : 340px) {
+    .input-group{
+        display: block;
+        width: 90% !important;
+        margin-top: 10px;
+    }
+}
+
